@@ -72,11 +72,9 @@ public class Main {
 
     Thread t = new Thread(new ProcessController());
     t.start();
-    Thread t2 = new Thread(new ProcessController());
-    t2.start();
     
     try {
-      while (t.isAlive() && t2.isAlive()) {
+      while (t.isAlive()) {
         Thread.sleep(1000);
       }
       message("Processing complete!");

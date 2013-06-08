@@ -27,19 +27,21 @@ C++ MySQL Connector with memory cache
 INFO
 ====
 
-Compiler: llvm-gcc 4.2
-C dialect: GNU99
-C++ dialect: GNU++98
-MySQL: 5.6
-MySQL Connector: 1.1.3
-boost: 1.53
-pthread
+    Compiler: llvm-gcc 4.2
+    C dialect: GNU99
+    C++ dialect: GNU++98
+    MySQL: 5.6
+    MySQL Connector: 1.1.3
+    boost: 1.53
+    pthread
 
-    CREATE TABLE IF NOT EXISTS records (
-       `key` VARCHAR(32) NOT NULL UNIQUE
-     , `data` TEXT NOT NULL
-     , PRIMARY KEY (`key`)
-    ) ENGINE = MyISAM;
+```sql
+CREATE TABLE IF NOT EXISTS records (
+   `key` VARCHAR(32) NOT NULL UNIQUE
+ , `data` TEXT NOT NULL
+ , PRIMARY KEY (`key`)
+) ENGINE = MyISAM;
+```
 
 Используется MySQL с Connector/C++ (http://dev.mysql.com/downloads/connector/cpp/). Используется динамическая линквка с libmysqlcppconn.7.dylib
 

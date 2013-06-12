@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "api v1 file:list" do
+describe "api v1 file" do
   it "Get list of files" do
     get "/api/v1/file/"
     expect(response).to be_success

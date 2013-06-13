@@ -139,7 +139,12 @@ private
 
   def filepathById(id)
     # Find file descriptor if it is open
-    fdesc = FileDescriptor.find(id)
-    filePath(fdesc.filename) or nil
+    begin
+      fdesc = FileDescriptor.find(id)
+      fpath = filePath(fdesc.filename)
+    rescue
+      fpath = nil
+    end
+    fpath
   end
 end
